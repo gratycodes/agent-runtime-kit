@@ -4,7 +4,7 @@ from agent_runtime.agent import Agent
 from agent_runtime.llm import FakeLLM, FakeTurn, LLM, OpenAIAdapter
 from agent_runtime.memory import TranscriptMemory
 from agent_runtime.tools import ToolRegistry, built_in_registry, calculator, http_get, tool
-from agent_runtime.types import Message, RunResult, Step, ToolCall
+from agent_runtime.types import Message, RunResult, Step, ToolCall, Usage
 
 __version__ = "0.1.0"
 
@@ -18,6 +18,7 @@ __all__ = [
     "RunResult",
     "Step",
     "ToolCall",
+    "Usage",
     "ToolRegistry",
     "TranscriptMemory",
     "built_in_registry",

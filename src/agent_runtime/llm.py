@@ -8,7 +8,7 @@ import uuid
 from dataclasses import dataclass, field
 from typing import Any, Protocol, runtime_checkable
 
-from agent_runtime.types import Message, ToolCall
+from agent_runtime.types import Message, ToolCall, Usage
 
 
 @runtime_checkable
@@ -30,6 +30,8 @@ class FakeTurn:
 
     content: str = ""
     tool_calls: list[dict[str, Any]] = field(default_factory=list)
+    usage: Usage | None = None  # optional scripted token usage
+    model: str | None = None  # optional response model, defaults to FakeLLM.model
 
 
 class FakeLLM:
@@ -39,12 +41,16 @@ class FakeLLM:
     exhausted it returns a fixed final message.
     """
 
+    provider_name = "fake"
+
     def __init__(
         self,
         script: list[FakeTurn] | None = None,
         *,
         fallback: str = "Done.",
+        model: str = "fake-llm",
     ) -> None:
+        self.model = model
         self._script = list(script or [])
         self._index = 0
         self._fallback = fallback
@@ -72,12 +78,16 @@ class FakeLLM:
                 role="assistant",
                 content=turn.content,
                 tool_calls=tool_calls or None,
+                usage=turn.usage,
+                model=turn.model or self.model,
             )
-        return Message(role="assistant", content=self._fallback)
+        return Message(role="assistant", content=self._fallback, model=self.model)
 
 
 class OpenAIAdapter:
     """Thin OpenAI Chat Completions adapter (optional; needs OPENAI_API_KEY)."""
+
+    provider_name = "openai"
 
     def __init__(
         self,
@@ -141,7 +151,23 @@ class OpenAIAdapter:
             role="assistant",
             content=choice.content or "",
             tool_calls=tool_calls,
+            usage=_usage_from_openai(getattr(resp, "usage", None)),
+            model=getattr(resp, "model", None),
         )
+
+
+def _usage_from_openai(u: Any) -> Usage | None:
+    """Map Chat Completions usage (prompt/completion tokens) to Usage."""
+    if u is None:
+        return None
+    prompt_details = getattr(u, "prompt_tokens_details", None)
+    completion_details = getattr(u, "completion_tokens_details", None)
+    return Usage(
+        input_tokens=getattr(u, "prompt_tokens", 0) or 0,
+        output_tokens=getattr(u, "completion_tokens", 0) or 0,
+        cache_read_input_tokens=getattr(prompt_details, "cached_tokens", 0) or 0,
+        reasoning_output_tokens=getattr(completion_details, "reasoning_tokens", 0) or 0,
+    )
 
 
 def _to_openai_message(m: Message) -> dict[str, Any]:

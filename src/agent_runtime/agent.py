@@ -9,7 +9,7 @@ from typing import Any
 from agent_runtime.llm import LLM
 from agent_runtime.memory import TranscriptMemory
 from agent_runtime.tools import ToolRegistry, built_in_registry
-from agent_runtime.types import Message, RunResult, Step, ToolCall
+from agent_runtime.types import Message, RunResult, Step, ToolCall, Usage
 
 
 class Agent:
@@ -46,6 +46,7 @@ class Agent:
         steps: list[Step] = []
         all_tool_calls: list[ToolCall] = []
         total_latency = 0.0
+        usage = Usage()
         final_text = ""
         stopped = "completed"
 
@@ -57,6 +58,8 @@ class Agent:
             )
             latency = (time.perf_counter() - t0) * 1000.0
             total_latency += latency
+            if assistant.usage is not None:
+                usage = usage + assistant.usage
 
             # Normalize tool call ids
             if assistant.tool_calls:
@@ -113,6 +116,7 @@ class Agent:
             tool_calls=all_tool_calls,
             total_latency_ms=total_latency,
             stopped_reason=stopped,
+            usage=usage,
         )
 
     def _invoke_tool(self, tc: ToolCall) -> str:
