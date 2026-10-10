@@ -1,0 +1,7 @@
+{"agent": "agent", "kind": "run", "user": "Divide 10 by 0, and if that fails divide 10 by 4", "version": 1}
+{"content": "", "kind": "llm", "model": "example-small", "step": 0, "tool_calls": [{"arguments": {"expression": "10 / 0"}, "id": "c1", "name": "calculator"}], "usage": {"cache_read_input_tokens": 0, "input_tokens": 320, "output_tokens": 20, "reasoning_output_tokens": 0}}
+{"arguments": {"expression": "10 / 0"}, "kind": "tool", "name": "calculator", "output": "{\"error\": \"float division by zero\"}", "step": 0, "tool_call_id": "c1"}
+{"content": "", "kind": "llm", "model": "example-small", "step": 1, "tool_calls": [{"arguments": {"expression": "10 / 4"}, "id": "c2", "name": "calculator"}], "usage": {"cache_read_input_tokens": 0, "input_tokens": 370, "output_tokens": 20, "reasoning_output_tokens": 0}}
+{"arguments": {"expression": "10 / 4"}, "kind": "tool", "name": "calculator", "output": "{\"expression\": \"10 / 4\", \"result\": 2.5}", "step": 1, "tool_call_id": "c2"}
+{"content": "10 / 0 is undefined; 10 / 4 = 2.5.", "kind": "llm", "model": "example-small", "step": 2, "tool_calls": [], "usage": {"cache_read_input_tokens": 0, "input_tokens": 420, "output_tokens": 16, "reasoning_output_tokens": 0}}
+{"final_text": "10 / 0 is undefined; 10 / 4 = 2.5.", "kind": "result", "stopped_reason": "completed", "usage": {"cache_read_input_tokens": 0, "input_tokens": 1110, "output_tokens": 56, "reasoning_output_tokens": 0}}

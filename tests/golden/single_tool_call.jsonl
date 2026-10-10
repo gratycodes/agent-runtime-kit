@@ -1,0 +1,5 @@
+{"agent": "agent", "kind": "run", "user": "Compute 12 * 11", "version": 1}
+{"content": "", "kind": "llm", "model": "example-small", "step": 0, "tool_calls": [{"arguments": {"expression": "12 * 11"}, "id": "c1", "name": "calculator"}], "usage": {"cache_read_input_tokens": 0, "input_tokens": 310, "output_tokens": 22, "reasoning_output_tokens": 0}}
+{"arguments": {"expression": "12 * 11"}, "kind": "tool", "name": "calculator", "output": "{\"expression\": \"12 * 11\", \"result\": 132.0}", "step": 0, "tool_call_id": "c1"}
+{"content": "12 * 11 = 132.", "kind": "llm", "model": "example-small", "step": 1, "tool_calls": [], "usage": {"cache_read_input_tokens": 0, "input_tokens": 352, "output_tokens": 9, "reasoning_output_tokens": 0}}
+{"final_text": "12 * 11 = 132.", "kind": "result", "stopped_reason": "completed", "usage": {"cache_read_input_tokens": 0, "input_tokens": 662, "output_tokens": 31, "reasoning_output_tokens": 0}}

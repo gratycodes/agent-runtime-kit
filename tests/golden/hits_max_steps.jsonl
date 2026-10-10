@@ -1,0 +1,8 @@
+{"agent": "agent", "kind": "run", "user": "Keep adding one", "version": 1}
+{"content": "", "kind": "llm", "model": "example-small", "step": 0, "tool_calls": [{"arguments": {"expression": "0 + 1"}, "id": "c0", "name": "calculator"}], "usage": {"cache_read_input_tokens": 0, "input_tokens": 300, "output_tokens": 10, "reasoning_output_tokens": 0}}
+{"arguments": {"expression": "0 + 1"}, "kind": "tool", "name": "calculator", "output": "{\"expression\": \"0 + 1\", \"result\": 1.0}", "step": 0, "tool_call_id": "c0"}
+{"content": "", "kind": "llm", "model": "example-small", "step": 1, "tool_calls": [{"arguments": {"expression": "1 + 1"}, "id": "c1", "name": "calculator"}], "usage": {"cache_read_input_tokens": 0, "input_tokens": 300, "output_tokens": 10, "reasoning_output_tokens": 0}}
+{"arguments": {"expression": "1 + 1"}, "kind": "tool", "name": "calculator", "output": "{\"expression\": \"1 + 1\", \"result\": 2.0}", "step": 1, "tool_call_id": "c1"}
+{"content": "", "kind": "llm", "model": "example-small", "step": 2, "tool_calls": [{"arguments": {"expression": "2 + 1"}, "id": "c2", "name": "calculator"}], "usage": {"cache_read_input_tokens": 0, "input_tokens": 300, "output_tokens": 10, "reasoning_output_tokens": 0}}
+{"arguments": {"expression": "2 + 1"}, "kind": "tool", "name": "calculator", "output": "{\"expression\": \"2 + 1\", \"result\": 3.0}", "step": 2, "tool_call_id": "c2"}
+{"final_text": "", "kind": "result", "stopped_reason": "max_steps", "usage": {"cache_read_input_tokens": 0, "input_tokens": 900, "output_tokens": 30, "reasoning_output_tokens": 0}}

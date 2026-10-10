@@ -47,4 +47,4 @@ include = ["src/agent_runtime", "tests", "README.md", "LICENSE"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "tests"]
