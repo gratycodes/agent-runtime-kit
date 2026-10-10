@@ -1,8 +1,10 @@
 # agent-runtime-kit
 
-**Python agent loop with tools, pluggable LLM, memory, and golden evals — portfolio kit for agentic AI systems.**
+A small Python agent loop with a tool registry, a pluggable LLM interface, transcript memory and golden evals. No framework, no graph DSL: the whole runtime is about 750 lines you can read in one sitting.
 
-An honest MVP for recruiter-facing demos of agentic AI: a multi-step loop, a tool registry, short-term transcript memory, a deterministic `FakeLLM` for tests, and an optional OpenAI adapter. Not a LangGraph clone — no graph DSL, no heavy framework. Real code you can read in one sitting.
+## Why
+
+Most agent frameworks hide the core loop behind abstractions. I wanted a minimal, tested version of that loop (call the model, run the requested tools, feed results back, stop on a final answer or a step limit) with a deterministic `FakeLLM`, so tool wiring can be tested in CI without an API key.
 
 ## Features
 
@@ -116,11 +118,21 @@ Coverage includes:
 | Plain loop, not a graph | Interviewers can read the control flow without a framework mental model |
 | `LLM` protocol + `FakeLLM` | Tests and demos stay deterministic; OpenAI is optional |
 | AST calculator | Safer than `eval`; still shows tool-use plumbing |
-| Bounded `http_get` | Timeout + byte cap so demos cannot hang or slur large bodies |
+| Bounded `http_get` | Timeout + byte cap so demos cannot hang or buffer large bodies |
 | `RunResult` counters | Latency and step traces make behavior inspectable |
 | Golden evals | Small, fixed scenarios that fail loudly if tool wiring regresses |
 
-**Out of scope (intentionally):** multi-agent orchestration, persistent long-term memory, streaming, production observability, prompt caching. Those belong in a product — this kit is the core loop.
+## Limitations
+
+- Single agent only: no multi-agent orchestration, planning, or streaming.
+- Memory is an in-process transcript; nothing is persisted between runs.
+- `http_get` checks the URL scheme, timeout (5 s) and size (50 KB) but does not block private or internal addresses, so do not expose it to untrusted input.
+- The OpenAI adapter is optional and not exercised in CI; tests use `FakeLLM`.
+- Golden evals check tool selection and final answers for three fixed scenarios; they are regression tests, not a model-quality benchmark.
+
+## Stack
+
+Python 3.11+ (standard library only for the core), optional `openai` SDK, pytest, Hatchling, GitHub Actions (Python 3.11, 3.12, 3.13).
 
 ## Project layout
 

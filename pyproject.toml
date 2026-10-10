@@ -5,11 +5,11 @@ build-backend = "hatchling.build"
 [project]
 name = "agent-runtime-kit"
 version = "0.1.0"
-description = "Python agent loop with tools, pluggable LLM, memory, and golden evals — portfolio kit for agentic AI systems."
+description = "Minimal Python agent loop with a tool registry, pluggable LLM, transcript memory and golden evals."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-authors = [{ name = "gratycodes" }]
+authors = [{ name = "Gratus Antin" }]
 keywords = ["agents", "llm", "tool-use", "ai", "python"]
 classifiers = [
   "Development Status :: 3 - Alpha",
