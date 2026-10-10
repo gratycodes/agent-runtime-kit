@@ -24,7 +24,7 @@
      {
       "key": "service.instance.id",
       "value": {
-       "stringValue": "493721df-0b02-4044-a1bb-b97929bfd0ed"
+       "stringValue": "ca8a9d54-2eb6-4e8a-8571-9a0fbdf7a714"
       }
      },
      {
@@ -39,17 +39,17 @@
     {
      "scope": {
       "name": "agent_runtime",
-      "version": "0.1.0"
+      "version": "0.2.0"
      },
      "spans": [
       {
-       "traceId": "54eca3c17f430512f82f454801758659",
-       "spanId": "4503c9b042b3ec11",
-       "parentSpanId": "c21448f57edf0e16",
+       "traceId": "8656a1fec20a5f1d740a31fbff5e818a",
+       "spanId": "eda7b817480f8040",
+       "parentSpanId": "f2819ecb87b242cc",
        "name": "chat example-large",
        "kind": 3,
-       "startTimeUnixNano": "1791652800321818039",
-       "endTimeUnixNano": "1791652800321888157",
+       "startTimeUnixNano": "1791652838505109053",
+       "endTimeUnixNano": "1791652838505167096",
        "attributes": [
         {
          "key": "feature",
@@ -122,13 +122,13 @@
        "flags": 256
       },
       {
-       "traceId": "54eca3c17f430512f82f454801758659",
-       "spanId": "0678d8b450870a4b",
-       "parentSpanId": "c21448f57edf0e16",
+       "traceId": "8656a1fec20a5f1d740a31fbff5e818a",
+       "spanId": "e58d110a026301c1",
+       "parentSpanId": "f2819ecb87b242cc",
        "name": "execute_tool lookup_order",
        "kind": 1,
-       "startTimeUnixNano": "1791652800322228578",
-       "endTimeUnixNano": "1791652800322280335",
+       "startTimeUnixNano": "1791652838505462280",
+       "endTimeUnixNano": "1791652838505510695",
        "attributes": [
         {
          "key": "feature",
@@ -177,13 +177,13 @@
        "flags": 256
       },
       {
-       "traceId": "54eca3c17f430512f82f454801758659",
-       "spanId": "92e9e01b3569e852",
-       "parentSpanId": "c21448f57edf0e16",
+       "traceId": "8656a1fec20a5f1d740a31fbff5e818a",
+       "spanId": "75d50bbde848ebaa",
+       "parentSpanId": "f2819ecb87b242cc",
        "name": "execute_tool refund_policy",
        "kind": 1,
-       "startTimeUnixNano": "1791652800322337969",
-       "endTimeUnixNano": "1791652800322370264",
+       "startTimeUnixNano": "1791652838505554553",
+       "endTimeUnixNano": "1791652838505576755",
        "attributes": [
         {
          "key": "feature",
@@ -232,13 +232,13 @@
        "flags": 256
       },
       {
-       "traceId": "54eca3c17f430512f82f454801758659",
-       "spanId": "fdda4603a61034c2",
-       "parentSpanId": "c21448f57edf0e16",
+       "traceId": "8656a1fec20a5f1d740a31fbff5e818a",
+       "spanId": "32703257e6844af1",
+       "parentSpanId": "f2819ecb87b242cc",
        "name": "chat example-large",
        "kind": 3,
-       "startTimeUnixNano": "1791652800322415077",
-       "endTimeUnixNano": "1791652800322438677",
+       "startTimeUnixNano": "1791652838505614081",
+       "endTimeUnixNano": "1791652838505635718",
        "attributes": [
         {
          "key": "feature",
@@ -311,12 +311,12 @@
        "flags": 256
       },
       {
-       "traceId": "54eca3c17f430512f82f454801758659",
-       "spanId": "c21448f57edf0e16",
+       "traceId": "8656a1fec20a5f1d740a31fbff5e818a",
+       "spanId": "f2819ecb87b242cc",
        "name": "invoke_agent support-bot",
        "kind": 1,
-       "startTimeUnixNano": "1791652800321751951",
-       "endTimeUnixNano": "1791652800322459954",
+       "startTimeUnixNano": "1791652838505035612",
+       "endTimeUnixNano": "1791652838505656202",
        "attributes": [
         {
          "key": "feature",
@@ -377,13 +377,13 @@
        "flags": 256
       },
       {
-       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
-       "spanId": "ba2ec019e7febf64",
-       "parentSpanId": "5e5e6012a1187bdb",
+       "traceId": "ceea7b4d46bb737fcfa9d21c76f91e17",
+       "spanId": "7856e034785cfe0f",
+       "parentSpanId": "919c1e46d6854037",
        "name": "chat example-small",
        "kind": 3,
-       "startTimeUnixNano": "1791652800322589299",
-       "endTimeUnixNano": "1791652800322617195",
+       "startTimeUnixNano": "1791652838505776789",
+       "endTimeUnixNano": "1791652838505801931",
        "attributes": [
         {
          "key": "feature",
@@ -450,13 +450,13 @@
        "flags": 256
       },
       {
-       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
-       "spanId": "19587542d7d6f4d7",
-       "parentSpanId": "5e5e6012a1187bdb",
+       "traceId": "ceea7b4d46bb737fcfa9d21c76f91e17",
+       "spanId": "c7b32dad7c42326f",
+       "parentSpanId": "919c1e46d6854037",
        "name": "execute_tool lookup_order",
        "kind": 1,
-       "startTimeUnixNano": "1791652800322651749",
-       "endTimeUnixNano": "1791652800322674710",
+       "startTimeUnixNano": "1791652838505834862",
+       "endTimeUnixNano": "1791652838505850846",
        "attributes": [
         {
          "key": "feature",
@@ -505,13 +505,13 @@
        "flags": 256
       },
       {
-       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
-       "spanId": "b229c57d53d65bff",
-       "parentSpanId": "5e5e6012a1187bdb",
+       "traceId": "ceea7b4d46bb737fcfa9d21c76f91e17",
+       "spanId": "11f430071fce9b10",
+       "parentSpanId": "919c1e46d6854037",
        "name": "chat example-small",
        "kind": 3,
-       "startTimeUnixNano": "1791652800322704921",
-       "endTimeUnixNano": "1791652800322726009",
+       "startTimeUnixNano": "1791652838505879110",
+       "endTimeUnixNano": "1791652838505895032",
        "attributes": [
         {
          "key": "feature",
@@ -578,12 +578,12 @@
        "flags": 256
       },
       {
-       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
-       "spanId": "5e5e6012a1187bdb",
+       "traceId": "ceea7b4d46bb737fcfa9d21c76f91e17",
+       "spanId": "919c1e46d6854037",
        "name": "invoke_agent support-bot",
        "kind": 1,
-       "startTimeUnixNano": "1791652800322555213",
-       "endTimeUnixNano": "1791652800322739854",
+       "startTimeUnixNano": "1791652838505747652",
+       "endTimeUnixNano": "1791652838505907944",
        "attributes": [
         {
          "key": "feature",
