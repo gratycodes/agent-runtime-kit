@@ -1,0 +1,645 @@
+{
+ "resourceSpans": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "telemetry.sdk.language",
+      "value": {
+       "stringValue": "python"
+      }
+     },
+     {
+      "key": "telemetry.sdk.name",
+      "value": {
+       "stringValue": "opentelemetry"
+      }
+     },
+     {
+      "key": "telemetry.sdk.version",
+      "value": {
+       "stringValue": "1.45.1"
+      }
+     },
+     {
+      "key": "service.instance.id",
+      "value": {
+       "stringValue": "493721df-0b02-4044-a1bb-b97929bfd0ed"
+      }
+     },
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "support-bot-demo"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "agent_runtime",
+      "version": "0.1.0"
+     },
+     "spans": [
+      {
+       "traceId": "54eca3c17f430512f82f454801758659",
+       "spanId": "4503c9b042b3ec11",
+       "parentSpanId": "c21448f57edf0e16",
+       "name": "chat example-large",
+       "kind": 3,
+       "startTimeUnixNano": "1791652800321818039",
+       "endTimeUnixNano": "1791652800321888157",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "refund-assistant"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-a"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "fake"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "example-large"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2400"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "60"
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": "1800"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "example-large"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "tool_calls"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "54eca3c17f430512f82f454801758659",
+       "spanId": "0678d8b450870a4b",
+       "parentSpanId": "c21448f57edf0e16",
+       "name": "execute_tool lookup_order",
+       "kind": 1,
+       "startTimeUnixNano": "1791652800322228578",
+       "endTimeUnixNano": "1791652800322280335",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "refund-assistant"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-a"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "lookup_order"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "54eca3c17f430512f82f454801758659",
+       "spanId": "92e9e01b3569e852",
+       "parentSpanId": "c21448f57edf0e16",
+       "name": "execute_tool refund_policy",
+       "kind": 1,
+       "startTimeUnixNano": "1791652800322337969",
+       "endTimeUnixNano": "1791652800322370264",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "refund-assistant"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-a"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "refund_policy"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_2"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "54eca3c17f430512f82f454801758659",
+       "spanId": "fdda4603a61034c2",
+       "parentSpanId": "c21448f57edf0e16",
+       "name": "chat example-large",
+       "kind": 3,
+       "startTimeUnixNano": "1791652800322415077",
+       "endTimeUnixNano": "1791652800322438677",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "refund-assistant"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-a"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "fake"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "example-large"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2650"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "48"
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": "2300"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "example-large-2026-09-01"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "54eca3c17f430512f82f454801758659",
+       "spanId": "c21448f57edf0e16",
+       "name": "invoke_agent support-bot",
+       "kind": 1,
+       "startTimeUnixNano": "1791652800321751951",
+       "endTimeUnixNano": "1791652800322459954",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "refund-assistant"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-a"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "fake"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "example-large"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "5050"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "108"
+         }
+        },
+        {
+         "key": "gen_ai.usage.cache_read.input_tokens",
+         "value": {
+          "intValue": "4100"
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
+       "spanId": "ba2ec019e7febf64",
+       "parentSpanId": "5e5e6012a1187bdb",
+       "name": "chat example-small",
+       "kind": 3,
+       "startTimeUnixNano": "1791652800322589299",
+       "endTimeUnixNano": "1791652800322617195",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "order-status"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-b"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "fake"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "example-small"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "900"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "25"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "example-small"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "tool_calls"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
+       "spanId": "19587542d7d6f4d7",
+       "parentSpanId": "5e5e6012a1187bdb",
+       "name": "execute_tool lookup_order",
+       "kind": 1,
+       "startTimeUnixNano": "1791652800322651749",
+       "endTimeUnixNano": "1791652800322674710",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "order-status"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-b"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "lookup_order"
+         }
+        },
+        {
+         "key": "gen_ai.tool.call.id",
+         "value": {
+          "stringValue": "call_1"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
+       "spanId": "b229c57d53d65bff",
+       "parentSpanId": "5e5e6012a1187bdb",
+       "name": "chat example-small",
+       "kind": 3,
+       "startTimeUnixNano": "1791652800322704921",
+       "endTimeUnixNano": "1791652800322726009",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "order-status"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-b"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "fake"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "example-small"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "1010"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "19"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "example-small"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      },
+      {
+       "traceId": "cdd4ead6625b424accdc21adcc9d8e06",
+       "spanId": "5e5e6012a1187bdb",
+       "name": "invoke_agent support-bot",
+       "kind": 1,
+       "startTimeUnixNano": "1791652800322555213",
+       "endTimeUnixNano": "1791652800322739854",
+       "attributes": [
+        {
+         "key": "feature",
+         "value": {
+          "stringValue": "order-status"
+         }
+        },
+        {
+         "key": "tenant.id",
+         "value": {
+          "stringValue": "tenant-b"
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-bot"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "fake"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "example-small"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "1910"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "44"
+         }
+        }
+       ],
+       "status": {},
+       "flags": 256
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
