@@ -23,7 +23,7 @@ def _load_example():
 def _attrs(span: dict) -> dict:
     out = {}
     for kv in span.get("attributes", []):
-        (vtype, value), = kv["value"].items()
+        (value,) = kv["value"].values()
         out[kv["key"]] = value
     return out
 
